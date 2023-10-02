@@ -1,0 +1,399 @@
+
+/*---color variable-----*/
+:root {
+    --Soft-red: hsl(7, 99%, 70%);
+    --Yellow: hsl(51, 100%, 49%);
+    --Dark-desaturated-cyan : hsl(167, 40%, 24%);
+    --Dark-blue: hsl(198, 62%, 26%);
+    --Dark-moderate-cyan : hsl(168, 34%, 41%);
+    --Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --Very-dark-grayish-blue: hsl(213, 9%, 39%);
+    --Dark-grayish-blue: hsl(232, 10%, 55%);
+    --Grayish-blue: hsl(210, 4%, 67%);
+    --White: hsl(0, 0%, 100%);
+  }
+
+  
+
+
+
+/*---typography*/
+body{
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    color:var(--Dark-grayish-blue);
+}
+
+h2,h3,h4{
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+h2{
+    font-size: 2rem;
+    font-weight: 900;
+}
+h3{
+font-size: 1.5rem;
+font-weight: 900;
+}
+
+h4{
+    font-size: 1.1rem;
+}
+
+img{
+    max-width: 100%;
+    display:block;
+}
+
+/*-----general----*/
+
+
+.container--mobile{
+    width:90%;
+    margin:0 auto;
+}
+
+.clickable{
+  cursor: pointer;  
+}
+.clickable:hover{
+  color:white; 
+}
+
+/*----header-----*/
+.header{
+    background-image: url("./images/mobile/image-header.jpg");   
+    background-size: cover;
+    padding-top: 2em;    
+    
+}
+
+
+.header__upper{
+    display:flex;
+    justify-content: space-between;
+}
+.nav__bar{
+    margin-top: 3em;
+    padding-bottom: 6em;
+}
+.nav__list{
+    background-color: var(--White);
+    padding:2em;
+    display:flex;
+    flex-direction: column;
+    gap:2em;
+    align-items: center; 
+}
+
+.header__heading{
+    display:flex;
+    flex-direction: column;
+    align-items: center;    
+    margin-top: 3em;
+    padding-bottom: 6em;
+}
+
+.header__heading__title{
+    color:white;
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+}
+
+/*-----toggle的動態class-------*/
+.nav__bar--hide{
+    display:none;
+}
+
+.header__heading--hide{
+    display:none;
+    
+}
+
+/*-----about------*/
+.about__intro__content{
+    padding:3em 0;
+}
+
+.about__title{
+    margin-bottom: 1em;
+    color:var(--Very-dark-desaturated-blue);
+}
+.about__description{
+    margin-bottom: 1em;
+}
+.about__btn{
+    font-size: 1.2rem;
+    font-family:'Fraunces', serif;;
+    font-weight: 900;
+    color:var(--Very-dark-desaturated-blue);
+    position: relative;
+    display:inline;
+}
+.about__btn--transform::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.4em; /* 控制粗线的高度 */
+    background-color: var( --Yellow); /* 粗线的颜色 */
+    border-radius: 3px;/*橢圓角*/
+    z-index: -2;
+  }
+
+  .about__btn--Stand::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.4em; /* 控制粗线的高度 */
+    background-color: #FE7766; /* 粗线的颜色 */
+    border-radius: 3px;/*橢圓角*/
+    z-index: -2;
+  }
+
+
+  
+  /*----services----*/
+  .services__item--graphic{
+    background-image: url("./images/mobile/image-graphic-design.jpg");
+    color:var(--Dark-desaturated-cyan);  
+  }
+  
+  .services__item--photography{
+      background-image: url("./images/mobile/image-photography.jpg");     
+      color:var(--Dark-blue);      
+  }
+  
+  .services__item{
+    height:600px;
+    background-size:cover; 
+    padding-bottom: 3em; 
+    
+  }
+  .services__item__wrap{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    
+  }
+  .service__item__title{
+    margin-bottom: 1em;
+    
+  }
+  
+  /*----testimonials------*/
+  .testimonials{
+    margin: 3em 0;
+  }
+  
+  .testimonials__title{
+    color:var( --Grayish-blue);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 3em;
+    font-weight: 700;
+  }
+.testimonial__item{
+    margin-bottom: 2em;
+}
+  /*---圓形圖片--*/
+  .testimonial__item_avatar{
+    border-radius: 50%;
+    margin-bottom: 2em;
+    margin: 0 auto;
+  }
+
+  .testimonial__item__content{
+    margin-bottom: 2em;
+  }
+
+  .testimonial__item__name{
+    color:var(--Very-dark-desaturated-blue);
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+  }
+
+  .testimonial__item__position{
+    font-size: 0.9rem;
+    color:var( --Grayish-blue);
+
+  }
+
+  /*---projects----*/
+  .projects{
+    display:flex;
+    flex-wrap: wrap;
+  }
+  .projects__img{
+    width:50%;
+    display:block;
+
+  }
+
+  /*----contact----*/
+  .contact{
+    background-color: #90D4C6;
+    padding-top: 1.5em;
+    padding-bottom: 3em;
+    
+  }
+  .contact__heading{
+    font-size: 2rem;
+    color:var( --Dark-desaturated-cyan);
+    margin-bottom: 1em;
+  }
+  .contact__list{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 5em;   
+    color:var( --Dark-moderate-cyan);
+  }
+
+  .contact__socialmedia_list{
+    display:flex;
+    justify-content: space-between;
+    width:50%;
+    margin:0 auto;
+  }
+
+  @media(min-width:900px){
+
+       /*-----header-----*/
+ #logo img{
+        width:15em;
+      }
+  .header{
+    background-image: url("./images/desktop/image-header.jpg");
+    background-position: center; 
+    height: 800px;    
+  }
+  .header__heading{
+    padding-bottom: 0;
+    margin-top: 10em;
+  }
+  .header__heading__title{
+    font-size: 5rem;
+  }
+
+  /*-----隱藏toggle-------*/
+.navbar__toggle {
+  display:none;
+}
+
+/*---變更heading 的latyout*/
+.header__upper--desktop{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/*---變更導覽列latyout 樣式-*/
+.nav__list{ 
+  flex-direction: row;
+  color:white;
+  background-color: #3dbeff;
+  
+}
+.nav__list__item{
+ padding:0.5em 1em;
+}
+
+
+.nav__bar{
+  margin-top: 0;
+  padding-bottom: 0;
+}
+/*----滑鼠滑過效果---*/
+.nav__list__item:hover{
+  background-color: #78cef5ff;
+  color:white; 
+  border-radius: 50px;
+}
+
+
+/*----active-*/
+.nav__list__item:active{
+  background-color: white;
+  color:var(--Very-dark-desaturated-blue); 
+  border-radius: 50px;
+}
+
+    /*-----about------*/
+    .about__intro{
+        display:flex;
+    }
+
+    .about__intro__image,.about__intro__content{
+        width:50%;
+
+    }
+   .about__intro--Transform .about__intro__image{
+    order:2;
+   }
+
+   .about__intro__image img {
+    width:100%;
+   }
+    /*----services----*/
+        
+  .services__item--graphic{
+    background-image: url("./images/desktop/image-graphic-design.jpg");    
+  }
+  
+  .services__item--photography{
+      background-image: url("./images/desktop/image-photography.jpg"); 
+   }
+   .services{
+    display:flex;
+   }
+   .services__item{
+    width:50%;
+   }
+   .services__item__wrap{
+    width:50%;
+   }
+   
+/*----testimonials------*/
+.testimonials__title{
+    font-size: 2rem;
+  }
+.testimonals__wrap{
+    display:flex;
+    gap:5em;
+}
+    
+  /*---projects----*/
+  .projects__img{
+    width:25%; 
+  }
+  .projects__img img{
+    width:100%; 
+  }
+  
+    /*----contact----*/
+    .contact__list{
+       width: 40%;
+        margin:0 auto;
+       margin-bottom: 5em; 
+      }
+      .contact__socialmedia_list{
+       
+        width:25%;
+        margin:0 auto;
+      }
+
+  }
+
+  /*-hover--*/
+  
+  .contact__socialmedia_list__item img:hover{
+    filter: brightness(100);
+  }
+
+ 
